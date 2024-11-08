@@ -86,3 +86,102 @@ crashlytics-build.properties
 
 # チーム開発において各メンバーのローカル環境依存の設定を除外
 /[Pp]rojectSettings/EditorBuildSettings.asset
+
+
+# --- 既存の除外設定 ---
+
+# Unityの自動生成キャッシュや一時ファイルを除外
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# メモリキャプチャが大きくなるため除外
+/[Mm]emoryCaptures/
+
+# 録画ファイルもサイズが大きくなるため除外
+/[Rr]ecordings/
+
+# アセットストアツールを使わない場合は無視（必要ならコメントを外す）
+# /[Aa]ssets/AssetStoreTools*
+
+# JetBrains Riderのプラグインの自動生成ファイル
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Visual Studioのキャッシュディレクトリ
+.vs/
+
+# Gradleのキャッシュディレクトリ
+.gradle/
+
+# VS/MD/Consuloなどの自動生成ファイル
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unityのメタファイル
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# クラッシュレポート時の自動生成ファイル
+sysinfo.txt
+
+# ビルド成果物
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlyticsの自動生成ファイル
+crashlytics-build.properties
+
+# Packed Addressables（必要ならコメントアウト解除）
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Androidの一時アセットファイル
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# --- カスタム設定の追加 ---
+
+# もしシーンファイルの自動コンフリクトが頻発する場合にシーンファイルの一時除外（必要なら解除）
+# /[Aa]ssets/Scenes/*.unity
+
+# ライセンスファイルがある場合の除外（必要に応じて）
+# LICENSE.md
+
+# チームによって個別のプレハブ管理が必要な場合は、特定フォルダを無視（例: 未使用プレハブ用フォルダ）
+# /[Aa]ssets/Prefabs/Unused/
+
+# 特定のシェーダーキャッシュを除外（必要なら使用）
+# /[Ll]ibrary/ShaderCache/
+
+# チーム開発において各メンバーのローカル環境依存の設定を除外
+/[Pp]rojectSettings/EditorBuildSettings.asset
+
+# --- 新規追加設定 ---
+
+# Git LFSを使用しない大きなファイルの除外
+# ファイルサイズが50MB以上のファイルはGitの管理から除外
+*.fbx
+*.dae
+
+# Git LFSで管理する大きなファイル（Gitで管理しないための備忘）
+# 例：git lfs track "*.fbx" "*.dae"
